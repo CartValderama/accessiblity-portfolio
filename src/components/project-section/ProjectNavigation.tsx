@@ -1,4 +1,4 @@
-import { Dispatch, MutableRefObject, SetStateAction, useState } from "react";
+import { Dispatch, MutableRefObject, SetStateAction } from "react";
 import { usePagination } from "@/utils/hooks";
 
 type ProjectNavigationProps = {
@@ -11,17 +11,12 @@ type ProjectNavigationProps = {
 export default function ProjectNavigation({
   currentPage,
   setCurrentPage,
-  sectionRef,
   totalPages = 3,
 }: ProjectNavigationProps) {
-  const [isStartNavigating, setIsStartNavigating] = useState(false);
-
   const { handlePageChange } = usePagination({
-    currentPage,
     setCurrentPage,
-    sectionRef,
+
     totalPages,
-    isStartNavigating,
   });
 
   return (

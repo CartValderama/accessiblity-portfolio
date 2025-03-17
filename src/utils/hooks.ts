@@ -1,7 +1,7 @@
 import { useActiveSectionContext } from "./useContext";
 import { useInView } from "react-intersection-observer";
 import type { SectionName } from "../types/sectionLink";
-import { Dispatch, MutableRefObject, SetStateAction, useEffect } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 
 export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
   const { ref, inView } = useInView({
@@ -18,26 +18,14 @@ export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
 }
 
 type UsePaginationProps = {
-  currentPage: number;
   setCurrentPage: Dispatch<SetStateAction<number>>;
-  sectionRef: MutableRefObject<HTMLHeadingElement | null>;
   totalPages: number;
-  isStartNavigating: boolean;
 };
 
 export const usePagination = ({
-  currentPage,
   setCurrentPage,
-  sectionRef,
   totalPages,
-  isStartNavigating,
 }: UsePaginationProps) => {
-  useEffect(() => {
-    if (isStartNavigating) {
-      sectionRef.current?.scrollIntoView();
-    }
-  }, [currentPage, sectionRef, isStartNavigating]);
-
   const handlePageChange = (direction: "prev" | "next") => {
     setCurrentPage((prevPage) =>
       direction === "prev"
