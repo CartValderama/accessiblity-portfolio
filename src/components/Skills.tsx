@@ -11,7 +11,7 @@ export default function Skills() {
 
   useEffect(() => {
     const handleResize = () => {
-      setThreshold(window.innerWidth < 770 ? 0.2 : 0.8);
+      setThreshold(window.innerWidth < 770 ? 0.2 : 0.5);
     };
 
     handleResize();
