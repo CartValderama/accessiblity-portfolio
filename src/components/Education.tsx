@@ -4,7 +4,7 @@ import Certificates from "./education-section/Certificates";
 import { useSectionInView } from "@/utils/hooks";
 
 export default function Education() {
-  const { ref } = useSectionInView("Education", 0.5);
+  const { ref } = useSectionInView("Education", 0.3);
   return (
     <section
       className="flex flex-col md:gap-2 scroll-mt-20"
