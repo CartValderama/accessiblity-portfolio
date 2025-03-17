@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { copyText } from "../../utils/general-utils";
-import { FaGithub, FaLinkedin, FaRegCopy } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { FaFileDownload } from "react-icons/fa";
 import TooltipCustom from "../ui/custom/Tooltip";
 
@@ -21,18 +20,7 @@ export default function Contacts() {
           }}
           className="p-1"
         >
-          <div className="flex items-baseline gap-x-2">
-            <h3 className="">Phone no.</h3>
-            <TooltipCustom msg="copy phone no.">
-              <button
-                onClick={() => copyText("phone")}
-                className=" hover:text-stone-500 transition "
-                aria-label="copy phone number +47 908 83 637"
-              >
-                <FaRegCopy />
-              </button>
-            </TooltipCustom>
-          </div>
+          <h3 className="">Phone no.</h3>
 
           <p id="phone" className="truncate">
             +47 908 83 637
@@ -102,19 +90,7 @@ export default function Contacts() {
           }}
           className="p-1"
         >
-          <div className="flex items-baseline gap-x-2">
-            <h3 className="">E-mail</h3>
-            <TooltipCustom msg="copy email">
-              <button
-                onClick={() => copyText("email")}
-                className=" hover:text-stone-500 transition"
-                aria-label="copy email cartantonio2000@gmail.com"
-              >
-                <FaRegCopy />
-              </button>
-            </TooltipCustom>
-          </div>
-
+          <h3 className="">E-mail</h3>
           <p id="email" className="truncate">
             cartantonio2000@gmail.com
           </p>
