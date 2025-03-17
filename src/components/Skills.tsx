@@ -7,7 +7,7 @@ import { useSectionInView } from "../utils/hooks";
 import { useEffect, useState } from "react";
 
 export default function Skills() {
-  const [threshold, setThreshold] = useState(0.8);
+  const [threshold, setThreshold] = useState(0.5);
 
   useEffect(() => {
     const handleResize = () => {

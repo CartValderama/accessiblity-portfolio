@@ -5,7 +5,7 @@ import { CustomCarousel } from "./ui/custom/Carousel";
 import { motion } from "framer-motion";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience", 0.8);
+  const { ref } = useSectionInView("Experience", 0.5);
   return (
     <section
       className="flex flex-col md:grid grid-cols-12 grid-rows-12 md:gap-2 scroll-mt-20"
