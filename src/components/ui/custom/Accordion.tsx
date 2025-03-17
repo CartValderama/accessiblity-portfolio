@@ -23,6 +23,9 @@ export default function Accordion({
       aria-controls={accordionId}
       tabIndex={0}
       onClick={() => setIsAccordion(!isAccordion)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") setIsAccordion(isAccordion);
+      }}
     >
       <div className="flex justify-between capitalize gap-x-1 items-start sm:items-center">
         <span className="flex gap-x-3 items-center">
