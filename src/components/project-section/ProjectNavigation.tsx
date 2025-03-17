@@ -34,7 +34,6 @@ export default function ProjectNavigation({
         type="button"
         onClick={() => {
           handlePageChange("prev");
-          setIsStartNavigating(true);
         }}
         disabled={currentPage === 1}
         aria-disabled={currentPage === 1}
@@ -58,7 +57,6 @@ export default function ProjectNavigation({
         type="button"
         onClick={() => {
           handlePageChange("next");
-          setIsStartNavigating(true);
         }}
         disabled={currentPage === totalPages}
         aria-disabled={currentPage === totalPages}
