@@ -30,7 +30,10 @@ export default function Main() {
   const luminariesRotation = useTransform(scrollYProgress, [0, 1], [0, 120]);
 
   return (
-    <main ref={ref} className="flex flex-col gap-6 ">
+    <main
+      ref={ref}
+      className="flex flex-col gap-6 lg:[&::-webkit-scrollbar]:block [&::-webkit-scrollbar]:hidden"
+    >
       {/* sun */}
       <motion.div
         initial={{ opacity: 0 }}
