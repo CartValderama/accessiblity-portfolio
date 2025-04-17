@@ -114,7 +114,7 @@ export default function ProjectContent({ content }: ProjectContentProps) {
             <img
               src={
                 name === "classic-portfolio" ||
-                name === "accessibility-portfolio"
+                name === "accessiblity-portfolio"
                   ? `https://raw.githubusercontent.com/CartValderama/${name}/main/src/assets/pics/${name}.png`
                   : `https://raw.githubusercontent.com/CartValderama/${name}/main/pics/${name}.png`
               }
