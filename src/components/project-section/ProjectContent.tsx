@@ -10,9 +10,6 @@ type ProjectContentProps = {
   content: RepositoryProps[];
 };
 
-const url =
-  "https://raw.githubusercontent.com/CartValderama/${name}/main/src/assets/pics/${name}.png";
-
 export default function ProjectContent({ content }: ProjectContentProps) {
   const { theme } = useTheme();
 
@@ -118,7 +115,7 @@ export default function ProjectContent({ content }: ProjectContentProps) {
               src={
                 name === "classic-portfolio" ||
                 name === "accessibility-portfolio"
-                  ? url
+                  ? `https://raw.githubusercontent.com/CartValderama/${name}/main/src/assets/pics/${name}.png`
                   : `https://raw.githubusercontent.com/CartValderama/${name}/main/pics/${name}.png`
               }
               alt={`${name} image`}
