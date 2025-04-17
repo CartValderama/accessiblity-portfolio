@@ -115,11 +115,12 @@ export default function ProjectContent({ content }: ProjectContentProps) {
             </div>
 
             <img
-              src={`${
-                url
+              src={
+                name === "classic-portfolio" ||
+                name === "accessibility-portfolio"
                   ? url
                   : `https://raw.githubusercontent.com/CartValderama/${name}/main/pics/${name}.png`
-              }`}
+              }
               alt={`${name} image`}
               aria-hidden="true"
               className="w-[23rem] border rounded-tl absolute -right-44 -bottom-20 group-hover:-translate-x-3 
