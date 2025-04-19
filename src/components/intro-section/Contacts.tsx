@@ -72,7 +72,7 @@ export default function Contacts() {
           <h3 className="">Resume</h3>
           <TooltipCustom msg="download my cv">
             <a
-              href="/docs/CV_ValderamaCart.pdf"
+              href="/docs/CV_Cart.pdf"
               download
               className="flex gap-1 items-center hover:underline transition-all duration-300"
               aria-label="Download Cart Valderama's resume as a PDF"
